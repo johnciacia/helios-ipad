@@ -12,7 +12,7 @@
 @class DetailViewController;
 @class SBJsonStreamParser;
 
-@interface MasterViewController : UIViewController <SBJsonStreamParserAdapterDelegate, NSURLConnectionDelegate> {
+@interface MasterViewController : UIViewController {
     IBOutlet UITextField *usernameTextField;
     IBOutlet UITextField *passwordTextField;
     IBOutlet UINavigationController *navigationController;

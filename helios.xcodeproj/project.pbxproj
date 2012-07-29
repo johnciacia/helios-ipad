@@ -18,6 +18,9 @@
 		522320F915C21AEF005665B4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522320F815C21AEF005665B4 /* DetailViewController.m */; };
 		5223210315C22FD4005665B4 /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5223210215C22FD4005665B4 /* SideViewController.m */; };
 		5223210615C237A1005665B4 /* StandardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5223210515C237A1005665B4 /* StandardsViewController.m */; };
+		525F7A5C15C5C677004D0F06 /* HeliosData.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F7A5B15C5C677004D0F06 /* HeliosData.m */; };
+		525F7A6315C5E556004D0F06 /* TeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F7A6215C5E556004D0F06 /* TeachersViewController.m */; };
+		525F7A6F15C5EDF5004D0F06 /* ObservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F7A6E15C5EDF5004D0F06 /* ObservationViewController.m */; };
 		528CC4D815C43F3F00A8E6D8 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 528CC4C015C43F3F00A8E6D8 /* NSObject+SBJson.m */; };
 		528CC4D915C43F3F00A8E6D8 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 528CC4C315C43F3F00A8E6D8 /* SBJsonParser.m */; };
 		528CC4DA15C43F3F00A8E6D8 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 528CC4C515C43F3F00A8E6D8 /* SBJsonStreamParser.m */; };
@@ -52,6 +55,12 @@
 		5223210215C22FD4005665B4 /* SideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideViewController.m; sourceTree = "<group>"; };
 		5223210415C237A1005665B4 /* StandardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardsViewController.h; sourceTree = "<group>"; };
 		5223210515C237A1005665B4 /* StandardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardsViewController.m; sourceTree = "<group>"; };
+		525F7A5A15C5C677004D0F06 /* HeliosData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeliosData.h; sourceTree = "<group>"; };
+		525F7A5B15C5C677004D0F06 /* HeliosData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeliosData.m; sourceTree = "<group>"; };
+		525F7A6115C5E556004D0F06 /* TeachersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeachersViewController.h; path = ../TeachersViewController.h; sourceTree = "<group>"; };
+		525F7A6215C5E556004D0F06 /* TeachersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeachersViewController.m; path = ../TeachersViewController.m; sourceTree = "<group>"; };
+		525F7A6D15C5EDF5004D0F06 /* ObservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservationViewController.h; sourceTree = "<group>"; };
+		525F7A6E15C5EDF5004D0F06 /* ObservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservationViewController.m; sourceTree = "<group>"; };
 		528CC4BF15C43F3F00A8E6D8 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		528CC4C015C43F3F00A8E6D8 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		528CC4C115C43F3F00A8E6D8 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -123,17 +132,15 @@
 		522320E515C21AEF005665B4 /* helios */ = {
 			isa = PBXGroup;
 			children = (
+				525F7A6515C5E7B7004D0F06 /* Details */,
+				525F7A6415C5E797004D0F06 /* Master */,
 				528CC4BE15C43F3F00A8E6D8 /* SBJson */,
 				522320EE15C21AEF005665B4 /* AppDelegate.h */,
 				522320EF15C21AEF005665B4 /* AppDelegate.m */,
 				522320F115C21AEF005665B4 /* MainStoryboard.storyboard */,
-				522320F415C21AEF005665B4 /* MasterViewController.h */,
-				522320F515C21AEF005665B4 /* MasterViewController.m */,
-				522320F715C21AEF005665B4 /* DetailViewController.h */,
-				522320F815C21AEF005665B4 /* DetailViewController.m */,
+				525F7A5A15C5C677004D0F06 /* HeliosData.h */,
+				525F7A5B15C5C677004D0F06 /* HeliosData.m */,
 				522320E615C21AEF005665B4 /* Supporting Files */,
-				5223210115C22FD4005665B4 /* SideViewController.h */,
-				5223210215C22FD4005665B4 /* SideViewController.m */,
 				5223210415C237A1005665B4 /* StandardsViewController.h */,
 				5223210515C237A1005665B4 /* StandardsViewController.m */,
 			);
@@ -149,6 +156,30 @@
 				522320ED15C21AEF005665B4 /* helios-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		525F7A6415C5E797004D0F06 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				522320F415C21AEF005665B4 /* MasterViewController.h */,
+				522320F515C21AEF005665B4 /* MasterViewController.m */,
+				5223210115C22FD4005665B4 /* SideViewController.h */,
+				5223210215C22FD4005665B4 /* SideViewController.m */,
+				525F7A6115C5E556004D0F06 /* TeachersViewController.h */,
+				525F7A6215C5E556004D0F06 /* TeachersViewController.m */,
+				525F7A6D15C5EDF5004D0F06 /* ObservationViewController.h */,
+				525F7A6E15C5EDF5004D0F06 /* ObservationViewController.m */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		525F7A6515C5E7B7004D0F06 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				522320F715C21AEF005665B4 /* DetailViewController.h */,
+				522320F815C21AEF005665B4 /* DetailViewController.m */,
+			);
+			name = Details;
 			sourceTree = "<group>";
 		};
 		528CC4BE15C43F3F00A8E6D8 /* SBJson */ = {
@@ -263,6 +294,9 @@
 				528CC4E115C43F3F00A8E6D8 /* SBJsonTokeniser.m in Sources */,
 				528CC4E215C43F3F00A8E6D8 /* SBJsonUTF8Stream.m in Sources */,
 				528CC4E315C43F3F00A8E6D8 /* SBJsonWriter.m in Sources */,
+				525F7A5C15C5C677004D0F06 /* HeliosData.m in Sources */,
+				525F7A6315C5E556004D0F06 /* TeachersViewController.m in Sources */,
+				525F7A6F15C5EDF5004D0F06 /* ObservationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

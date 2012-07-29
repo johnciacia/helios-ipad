@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SideViewController : UIViewController
+@interface SideViewController : UINavigationController
 
 @end
