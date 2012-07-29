@@ -45,26 +45,45 @@
 
 -(IBAction)login:(id)sender 
 {
-    [usernameTextField resignFirstResponder];
-	[passwordTextField resignFirstResponder];
-	
-	adapter = [[SBJsonStreamParserAdapter alloc] init];
-	adapter.delegate = self;
-	parser = [[SBJsonStreamParser alloc] init];
-	parser.delegate = adapter;
-	parser.supportMultipleDocuments = YES;
+//    [usernameTextField resignFirstResponder];
+//	[passwordTextField resignFirstResponder];
+//	
+//	adapter = [[SBJsonStreamParserAdapter alloc] init];
+//	adapter.delegate = self;
+//	parser = [[SBJsonStreamParser alloc] init];
+//	parser.delegate = adapter;
+//	parser.supportMultipleDocuments = YES;
 	
     NSString *s1 = @"http://helios.staging.onnolia.dev/api.php?username=";
     NSString *s2 = [s1 stringByAppendingString:usernameTextField.text];
     NSString *s3 = [s2 stringByAppendingString:@"&password="];
     NSString *url = [s3 stringByAppendingString:passwordTextField.text];
-	
-	NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-	
-	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-    
-    [self performSegueWithIdentifier:@"login" sender:self];
 
+	NSError *theError = nil;
+//    NSArray *keys = [NSArray arrayWithObjects:@"UserId", @"Password", nil];
+//    NSArray *objects = [NSArray arrayWithObjects:@"rajin.sasi", @"abhi1551", nil];
+//    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+//    NSString *jsonString = [jsonDictionary JSONRepresentation];
+//    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    [request setValue:jsonString forHTTPHeaderField:@"json"];
+//    [request setHTTPMethod:@"POST"];
+//    [request setHTTPBody:jsonData];
+    NSURLResponse *theResponse =[[NSURLResponse alloc]init];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&theResponse error:&theError];      
+    NSMutableString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *resp = [string JSONValue];
+    
+//	NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+//	
+//	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+//
+    if( [[resp objectForKey:@"login"] isEqualToString:@"success"] ) {
+        [self performSegueWithIdentifier:@"login" sender:self];
+    } else {
+        NSLog(@"login failed...");
+    }
 }
 
 #pragma mark SBJsonStreamParserAdapterDelegate methods
@@ -73,7 +92,8 @@
 }
 
 - (void)parser:(SBJsonStreamParser *)parser foundObject:(NSDictionary *)dict {
-    NSLog(@"%@", dict);
+    NSLog(@"HERE4");
+    teachers = [[NSMutableDictionary alloc] initWithDictionary:dict];
 }
 
 

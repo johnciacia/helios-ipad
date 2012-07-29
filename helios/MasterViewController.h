@@ -20,6 +20,8 @@
     NSURLConnection *theConnection;
     SBJsonStreamParser *parser;
     SBJsonStreamParserAdapter *adapter;
+    
+    NSMutableDictionary *teachers;
 }
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
