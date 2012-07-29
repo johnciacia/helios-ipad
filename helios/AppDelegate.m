@@ -3,7 +3,7 @@
 //  helios
 //
 //  Created by John Ciacia on 7/26/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Onnolia. All rights reserved.
 //
 
 #import "AppDelegate.h"

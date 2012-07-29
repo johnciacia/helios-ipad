@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  SideViewController.h
 //  helios
 //
 //  Created by John Ciacia on 7/26/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface SideViewController : UIViewController
 
 @end
