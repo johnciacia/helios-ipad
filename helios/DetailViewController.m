@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "LoginViewController.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -46,6 +47,11 @@
 
 - (void)viewDidLoad
 {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+	LoginViewController *modalLoginView = [sb instantiateViewControllerWithIdentifier:@"LoginViewController"];
+	[modalLoginView setModalPresentationStyle:UIModalPresentationFullScreen];
+	[self presentModalViewController:modalLoginView animated:NO];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];

@@ -21,6 +21,7 @@
 		525F7A5C15C5C677004D0F06 /* HeliosData.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F7A5B15C5C677004D0F06 /* HeliosData.m */; };
 		525F7A6315C5E556004D0F06 /* TeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F7A6215C5E556004D0F06 /* TeachersViewController.m */; };
 		525F7A6F15C5EDF5004D0F06 /* ObservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525F7A6E15C5EDF5004D0F06 /* ObservationViewController.m */; };
+		528534E015C60B02009BB9AA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528534DF15C60B02009BB9AA /* LoginViewController.m */; };
 		528CC4D815C43F3F00A8E6D8 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 528CC4C015C43F3F00A8E6D8 /* NSObject+SBJson.m */; };
 		528CC4D915C43F3F00A8E6D8 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 528CC4C315C43F3F00A8E6D8 /* SBJsonParser.m */; };
 		528CC4DA15C43F3F00A8E6D8 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 528CC4C515C43F3F00A8E6D8 /* SBJsonStreamParser.m */; };
@@ -61,6 +62,8 @@
 		525F7A6215C5E556004D0F06 /* TeachersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeachersViewController.m; path = ../TeachersViewController.m; sourceTree = "<group>"; };
 		525F7A6D15C5EDF5004D0F06 /* ObservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservationViewController.h; sourceTree = "<group>"; };
 		525F7A6E15C5EDF5004D0F06 /* ObservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservationViewController.m; sourceTree = "<group>"; };
+		528534DE15C60B02009BB9AA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		528534DF15C60B02009BB9AA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		528CC4BF15C43F3F00A8E6D8 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		528CC4C015C43F3F00A8E6D8 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		528CC4C115C43F3F00A8E6D8 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 		525F7A6415C5E797004D0F06 /* Master */ = {
 			isa = PBXGroup;
 			children = (
+				528534DE15C60B02009BB9AA /* LoginViewController.h */,
+				528534DF15C60B02009BB9AA /* LoginViewController.m */,
 				522320F415C21AEF005665B4 /* MasterViewController.h */,
 				522320F515C21AEF005665B4 /* MasterViewController.m */,
 				5223210115C22FD4005665B4 /* SideViewController.h */,
@@ -297,6 +302,7 @@
 				525F7A5C15C5C677004D0F06 /* HeliosData.m in Sources */,
 				525F7A6315C5E556004D0F06 /* TeachersViewController.m in Sources */,
 				525F7A6F15C5EDF5004D0F06 /* ObservationViewController.m in Sources */,
+				528534E015C60B02009BB9AA /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

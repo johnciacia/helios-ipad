@@ -19,7 +19,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="2472" y="-828"/>
+            <point key="canvasLocation" x="4232" y="-596"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="16">
@@ -49,7 +49,57 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3224" y="156"/>
+            <point key="canvasLocation" x="4984" y="388"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="U5t-RS-SjD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NW-I1-V9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="LoginViewController" id="VPu-VO-qcZ" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQJ-Xs-ya2">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="rIO-aY-khO">
+                                <rect key="frame" x="234" y="349" width="301" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="io2-aM-n6t">
+                                <rect key="frame" x="234" y="388" width="301" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gZd-6g-C7B">
+                                <rect key="frame" x="439" y="436" width="76" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="VPu-VO-qcZ" eventType="touchUpInside" id="NFd-nf-cvx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="io2-aM-n6t" id="ajU-tP-x65"/>
+                        <outlet property="usernameTextField" destination="rIO-aY-khO" id="hs2-cY-Vzw"/>
+                        <segue destination="CLU-xW-AIo" kind="modal" identifier="login" id="nze-bk-92h"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2847" y="-1804"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="18">
@@ -57,6 +107,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
                 <splitViewController id="5" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oPS-lJ-fzB"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -65,7 +116,7 @@
                     </connections>
                 </splitViewController>
             </objects>
-            <point key="canvasLocation" x="1095" y="-828"/>
+            <point key="canvasLocation" x="2855" y="-596"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="WGT-BT-z2M">
@@ -83,12 +134,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5X3-Ne-S6s">
-                                <rect key="frame" x="20" y="49" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LmM-Hf-d1p">
                                 <rect key="frame" x="20" y="88" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,40 +141,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="P2f-HU-nt8">
-                                <rect key="frame" x="20" y="123" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W7o-vI-KAu">
-                                <rect key="frame" x="20" y="162" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="Hb1-eb-6Ba" eventType="touchUpInside" id="Rxk-wZ-E4l"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="exZ-Qn-DyM"/>
-                    <connections>
-                        <outlet property="passwordTextField" destination="P2f-HU-nt8" id="yS3-OU-a0A"/>
-                        <outlet property="usernameTextField" destination="5X3-Ne-S6s" id="2fL-E9-VY6"/>
-                        <segue destination="CLU-xW-AIo" kind="modal" identifier="login" id="Spa-Et-VGd"/>
-                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2928" y="-828"/>
+            <point key="canvasLocation" x="4668" y="-596"/>
         </scene>
         <!--Teachers View Controller-->
         <scene sceneID="mhz-YO-MaW">
@@ -137,10 +156,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxu-b7-KAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="CrP-sy-gms" customClass="TeachersViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="y51-xm-dsk">
-                        <rect key="frame" x="0.0" y="64" width="768" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeacherCell" id="8Bg-Lk-lun">
                                 <rect key="frame" x="0.0" y="22" width="768" height="44"/>
@@ -159,7 +177,7 @@
                     <navigationItem key="navigationItem" id="Bjj-d4-VVb"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="4277" y="-828"/>
+            <point key="canvasLocation" x="4629" y="-1804"/>
         </scene>
         <!--Observation View Controller-->
         <scene sceneID="qik-3i-fLn">
@@ -167,10 +185,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0J-Mz-Y42" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="LWF-yG-77M" customClass="ObservationViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UoO-xS-NKY">
-                        <rect key="frame" x="0.0" y="64" width="768" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObservationCell" id="dbs-lW-9SA">
+                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="748" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="LWF-yG-77M" id="ur1-2c-Pfd"/>
                             <outlet property="delegate" destination="LWF-yG-77M" id="jrc-IL-eUK"/>
@@ -179,7 +207,7 @@
                     <navigationItem key="navigationItem" id="R50-ww-qvQ"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="5159" y="-828"/>
+            <point key="canvasLocation" x="5511" y="-1804"/>
         </scene>
         <!--Side View Controller-->
         <scene sceneID="DMF-yK-zqj">
@@ -195,7 +223,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="3377" y="-828"/>
+            <point key="canvasLocation" x="3729" y="-1804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="50">
@@ -210,7 +238,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="2334" y="156"/>
+            <point key="canvasLocation" x="4094" y="388"/>
         </scene>
     </scenes>
     <classes>
@@ -220,14 +248,17 @@
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="MasterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="login:"/>
                 <relationship kind="outlet" name="navigationController" candidateClass="UINavigationController"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
         </class>
         <class className="ObservationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ObservationViewController.h"/>
