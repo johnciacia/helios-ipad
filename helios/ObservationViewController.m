@@ -15,6 +15,7 @@
 
 @implementation ObservationViewController
 @synthesize teacher_id;
+@synthesize observations;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,7 +53,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [HeliosData instance].teachers.count;
+    return observations.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,9 +66,13 @@
     }
     
     
-    [[cell textLabel] setText:[[[HeliosData instance].teachers objectAtIndex:indexPath.row] objectForKey:@"first_name"]];
+   [[cell textLabel] setText:[[observations objectAtIndex:indexPath.row] objectForKey:@"date"]];
     
     return cell;
 }
 
+- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath 
+{
+    [self.presentingViewController.presentingViewController dismissModalViewControllerAnimated:YES];
+}
 @end

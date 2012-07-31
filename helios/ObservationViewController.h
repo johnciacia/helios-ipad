@@ -10,8 +10,10 @@
 
 @interface ObservationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     NSInteger teacher_id;
+    NSMutableArray *observations;
 }
 
 @property (nonatomic, readwrite) NSInteger teacher_id;
+@property (nonatomic, readwrite) NSMutableArray *observations;
 
 @end

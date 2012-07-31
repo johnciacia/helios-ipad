@@ -11,6 +11,7 @@
 @implementation HeliosData
 
 @synthesize data;
+@synthesize observation;
 
 static HeliosData *instance = NULL;
 
@@ -32,6 +33,19 @@ static HeliosData *instance = NULL;
         teachers = [[NSArray alloc] initWithArray:[data objectForKey:@"teachers"]];
     
     return teachers;
+}
+
+- (NSArray *)getObservationsByTeacherId:(NSInteger)teacherId
+{
+    NSMutableArray *obs = [[NSMutableArray alloc] init];
+    
+    for( int i = 0; i < [[data objectForKey:@"observations"] count]; i++) {
+        if([[[[data objectForKey:@"observations"] objectAtIndex:i] objectForKey:@"teacher_id"] intValue] == teacherId ) {
+            [obs addObject:[[data objectForKey:@"observations"] objectAtIndex:i]];
+        }
+    }
+    
+    return obs;
 }
 
 @end

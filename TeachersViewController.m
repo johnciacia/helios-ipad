@@ -80,7 +80,11 @@
     {
         NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
         ObservationViewController *detailViewController = [segue destinationViewController];
-        detailViewController.teacher_id = (NSInteger)[[[HeliosData instance].teachers objectAtIndex:selectedRowIndex.row] objectForKey:@"id"];
+        
+        NSString *teacherId = [[[HeliosData instance].teachers objectAtIndex:selectedRowIndex.row] objectForKey:@"id"];
+
+        
+        detailViewController.observations = (NSMutableArray *)[[HeliosData instance] getObservationsByTeacherId:[teacherId intValue]];
     }
 }
 
