@@ -29,7 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"BACKTOINDEXNOTE" object:nil];
+    self.view.backgroundColor = [UIColor underPageBackgroundColor];
+    
 	// Do any additional setup after loading the view.
 }
 
