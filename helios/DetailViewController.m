@@ -91,7 +91,7 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
+    barButtonItem.title = NSLocalizedString(@"Behaviors", @"Behaviors");
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
     self.masterPopoverController = popoverController;
 }
@@ -160,6 +160,9 @@
     [[maleInteractions objectAtIndex:(int)sender.view.tag] setTitle:[NSString stringWithFormat:@"%d", x] forState:UIControlStateNormal];
 }
 
+//todo: student timer
+//todo: change font so it is darker
+//todo: add "edit" mode
 - (IBAction)teacherTimer:(id)sender {
     if(teacherTimerEnabled == NO) {
         teacherTimerEnabled = YES;
@@ -182,5 +185,16 @@
 
 - (IBAction)studentTimer:(id)sender {
     NSLog(@"Student timer...");
+}
+
+
+-(IBAction)toggleMode:(id)sender {
+    if(switchMode.on) {
+        barButtonItemAdd.enabled = YES;
+        barButtonItemPresets.enabled = YES;
+    } else {
+        barButtonItemAdd.enabled = NO;
+        barButtonItemPresets.enabled = NO;        
+    }
 }
 @end

@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "LoginViewController.h"
 #import "SideViewController.h"
 #import "SBJson/SBJson.h"
@@ -31,7 +32,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor underPageBackgroundColor];
     
-	// Do any additional setup after loading the view.
+    loginFormView.layer.cornerRadius = 5;
+    loginFormView.layer.masksToBounds = YES;
+    
+//    [loginButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//    [loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+//    loginButton.backgroundColor = [UIColor whiteColor];
+//    loginButton.layer.borderColor = [UIColor blackColor].CGColor;
+//    loginButton.layer.borderWidth = 0.5f;
+//    loginButton.layer.cornerRadius = 10.0f;
+
 }
 
 - (void)viewDidUnload

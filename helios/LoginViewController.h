@@ -12,9 +12,13 @@
 @class DetailViewController;
 @class SBJsonStreamParser;
 
+
+
 @interface LoginViewController : UIViewController {
     IBOutlet UITextField *usernameTextField;
     IBOutlet UITextField *passwordTextField;
+    IBOutlet UIButton *loginButton;
+    IBOutlet UIView *loginFormView;
     
     NSURLConnection *theConnection;
     SBJsonStreamParser *parser;

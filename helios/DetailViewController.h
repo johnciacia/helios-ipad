@@ -32,8 +32,12 @@
     BOOL studentTimerEnabled;
     NSTimer *studentTimer;
     
-    //
+    // Toolbar
     IBOutlet UIBarButtonItem *teacherTimerLabel;
+    IBOutlet UIBarButtonItem *studentTimerLabel;
+    IBOutlet UISwitch *switchMode;
+    IBOutlet UIBarButtonItem *barButtonItemPresets;
+    IBOutlet UIBarButtonItem *barButtonItemAdd;
 }
 
 @property (strong, nonatomic) id detailItem;
@@ -43,5 +47,6 @@
 - (IBAction)addMaleDesk:(id)sender;
 - (IBAction)teacherTimer:(id)sender;
 - (IBAction)studentTimer:(id)sender;
+- (IBAction)toggleMode:(id)sender;
 
 @end

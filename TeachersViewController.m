@@ -68,8 +68,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    
-    [[cell textLabel] setText:[[[HeliosData instance].teachers objectAtIndex:indexPath.row] objectForKey:@"first_name"]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ %@", [[[HeliosData instance].teachers objectAtIndex:indexPath.row] objectForKey:@"first_name"], [[[HeliosData instance].teachers objectAtIndex:indexPath.row] objectForKey:@"last_name"]]];
     
     return cell;
 }
